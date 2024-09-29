@@ -1,0 +1,205 @@
+/* General body reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light background */
+}
+
+/* Transparent Navbar */
+.navbar {
+    position: absolute; /* Make the navbar overlap the hero section */
+    top: 0;
+    width: 100%;
+    z-index: 3; /* Ensure the navbar stays above the hero section */
+    background-color: transparent; /* Transparent background */
+    padding: 20px 0; /* Add some padding for spacing */
+    transition: background-color 0.3s ease; /* Smooth transition when background changes */
+}
+
+.navbar .nav-link {
+    color: #000; /* Adjust link color for contrast */
+}
+
+/* Move Sign Up and Log In to the left */
+.navbar-nav {
+    margin-right: 40px; /* Move the 'Sign Up' and 'Log In' buttons to the left */
+}
+
+/* Hero Section Styling */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Separate left and right content */
+    overflow: hidden;
+}
+
+/* Curved Background */
+.curved-background {
+    position: absolute;
+    right: 0;
+    width: 45%; /* Adjusted width of the curve */
+    height: 100%;
+    background: radial-gradient(circle at 0% 100%, #593a0d, #3c2c0a); /* Gradient for curve */
+    clip-path: ellipse(75% 50% at 100% 50%); /* Adjusted curve size */
+    z-index: 1; /* Behind the content */
+}
+
+/* Content inside the hero section */
+.content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%; /* Ensures the content takes full width */
+    padding: 0 50px; /* Adds padding for better spacing */
+    box-sizing: border-box;
+}
+
+/* Left-side: Sign-up form */
+.signup-form {
+    flex: 1; /* Takes up one half */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 50px; /* Space between form and right content */
+}
+
+.signup-form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.signup-form label {
+    font-size: 1rem;
+}
+
+.signup-form .form-control {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+    background-color: #218838;
+}
+
+.signup-form .text-center p {
+    font-size: 1rem;
+}
+
+/* Right-side: Salad image and overlay */
+.right-content {
+    flex: 1; /* Right content takes up the other half */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 10%;
+}
+
+.salad-image {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    margin-right: 30px;
+}
+
+/* Text Overlay */
+.text-overlay {
+    position: absolute;
+    bottom: -60px; /* Adjust this value as needed */
+    background-color: rgba(140, 104, 58, 0.8); /* Brownish background with opacity */
+    padding: 10px 20px;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    z-index: 3;
+    left: auto; /* Ensures it does not stretch to the left */
+    right: 0; /* Sticks it to the right side */
+    width: 250px; /* Adjust width to fit below the salad image */
+    margin-right: 310px; /* Adjust as necessary for spacing */
+}
+
+.text-overlay h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.text-overlay p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+}
+
+/* Styling for 'Sign Up' and 'Log In' */
+.nav-item .nav-link {
+    padding: 8px 15px;
+    font-weight: bold; /* Make the text bold */
+    font-size: 1rem; /* Increase font size for better visibility */
+}
+
+.nav-item .nav-link[href*='Sign Up'] {
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 10px 20px; /* Add more padding for a larger button */
+    transition: background-color 0.3s ease;
+}
+
+.nav-item .nav-link[href*='Log In'] {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item .nav-link[href*='Sign Up']:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.nav-item .nav-link[href*='Log In']:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .curved-background {
+        width: 100%;
+        height: 50%;
+        clip-path: ellipse(100% 40% at 50% 100%);
+    }
+
+    .salad-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .signup-form {
+        width: 100%;
+        margin-bottom: 20px; /* Add spacing between stacked elements */
+    }
+}

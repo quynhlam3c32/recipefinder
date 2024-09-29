@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+    <!-- Add Bootstrap CSS for responsive navigation -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script type="module" src="assets/js/index.js" defer></script> <!-- JS to handle login/logout -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Recipe Page</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Recipes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Submit Recipes</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Saved</a>    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav" id="auth-links">
+                    <!-- Authentication links will be dynamically injected here -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="content">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <h2>Find Recipes</h2>
+                <p>Enter ingredients you have:</p>
+                <form action="#">
+                    <input type="text" placeholder="e.g., chicken, tomato, garlic" class="search-input">
+                    <button type="submit" class="search-button">Search Recipes</button>
+                </form>
+
+                <!-- Carousel for Suggested Recipes -->
+                <div id="recipeCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-center">
+                                <div class="text-center">
+                                    <img src="assets/img/burger.webp" alt="Burger" class="d-block" style="width: 100px; height: 100px;">
+                                    <h5>Burger</h5>
+                                    <p>20-25mins</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center">
+                                <div class="text-center">
+                                    <img src="assets/img/cake.png" alt="Cake" class="d-block" style="width: 100px; height: 100px;">
+                                    <h5>Cake</h5>
+                                    <p>$2.25</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center">
+                                <div class="text-center">
+                                    <img src="assets/img/pho.jpg" alt="Pho" class="d-block" style="width: 100px; height: 100px;">
+                                    <h5>Pho</h5>
+                                    <p>60-90mins</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#recipeCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#recipeCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right content -->
+            <div class="right-content">
+                <img src="assets/img/file.png" alt="Salad Image" class="salad-image">
+                <div class="text-overlay">
+                    <h2>Salad</h2>
+                    <p>10-15 mins</p>
+                </div>
+            </div>
+        </div>
+        <div class="curved-background"></div>
+    </div>
+
+    <!-- Add Bootstrap JS for toggling navbar on mobile view -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
