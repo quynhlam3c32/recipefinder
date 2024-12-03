@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-link {
+    color: #000;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 100px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.curved-background {
+    position: absolute;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background: radial-gradient(circle at 0% 100%, #593a0d, #3c2c0a);
+    clip-path: ellipse(75% 50% at 100% 50%);
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.search-section {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.right-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 10%;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.salad-image {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.text-overlay {
+    position: sticky;
+    margin-top: -9px;
+    background-color: rgba(140, 104, 58, 0.8);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    width: 250px;
+    max-width: 100%;
+}
+
+.card {
+    margin-top: 20px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.card-body {
+    display: flex;
+    align-items: flex-start;
+}
+
+.recipe-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ff9100da;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.tag .remove-tag {
+    margin-left: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.suggestion-box {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 1000;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.suggestion-item {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .curved-background {
+        width: 100%;
+        height: 50%;
+        clip-path: ellipse(100% 40% at 50% 100%);
+    }
+
+    .salad-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .search-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
